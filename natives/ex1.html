@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UOL - Ex1 Native </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<style>
+    figure,picture{
+        margin: 0;
+    }
+    .container{
+        width: 100%;
+    }
+    .container .native{
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+    .container .native figure{
+        position: relative;
+        height: 200px;
+    }
+    .container .native figure span{
+        position: absolute;
+        left: 10px;
+        bottom: 15px;   
+        color: #fff;
+        background-color: blue;
+        border-radius: 7px;
+        padding: 3px 5px;
+    }
+    .container .native .text-native{
+        margin: 0;
+        padding: 5px  0;
+        font-size: 16px;
+        font-weight: 500;
+        color: #4d4d4d;
+        font-family: 'Roboto';
+        line-height: 22px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="native">
+            <figure>
+                <picture>
+                    <img src="https://picsum.photos/250/200" alt="Image Picsum Native">
+                </picture>
+                <span class="hat-native">Cafuné</span>
+            </figure>
+            <figcaption class="text-native">
+                Cuidado de limpeza que todos os "pais de pets" devem conhecer
+                para manter um lar feliz
+            </figcaption>
+        </div>
+    </div>
+</body>
+</html>
