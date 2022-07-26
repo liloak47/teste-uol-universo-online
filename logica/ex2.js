@@ -15,4 +15,4 @@ const techOpsPrint = (limit, steps) =>{
         }
     }
 }
-techOpsPrint(23,0);
+techOpsPrint(23,3);
