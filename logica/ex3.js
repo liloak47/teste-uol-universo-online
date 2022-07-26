@@ -1,11 +1,11 @@
 const verifyNumberPrint = (i) =>{
     if(i == 0){
         console.log(i);
-    }else if( i%3 == 0 && i%5 == 0){
+    }else if( i % 3 == 0 && i % 5 == 0){
         console.log('TechOps');
-    }else if(i%3 == 0){
+    }else if(i % 3 == 0){
         console.log('Tech');
-    }else if(i%5 == 0){
+    }else if(i % 5 == 0){
         console.log('Ops');
     }else{
         console.log(i);

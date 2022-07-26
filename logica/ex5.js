@@ -2,18 +2,18 @@ const techOpsPrint = (limit, steps, position) =>{
     if(steps === 0){
         console.error("step param incorrect; steps must be more then 0 ")
     }else{
-        let nextPosition = position + 1;
-        if (nextPosition <= limit){
-            if( nextPosition % 3 ==0 && nextPosition % 5 == 0){
+        position++;
+        if (position <= limit){
+            if( position % 3 == 0 && position % 5 == 0){
                 console.log('TechOps');
-            }else if(nextPosition % 3 ==0){
+            }else if(position % 3 == 0){
                 console.log('Tech');
-            }else if(nextPosition % 5 == 0){
+            }else if(position % 5 == 0){
                 console.log('Ops');
             }else{
-                console.log(nextPosition);
+                console.log(position);
             }   
-            techOpsPrint(limit,steps, nextPosition)
+            techOpsPrint(limit,steps, position)
         }
     }
 }
