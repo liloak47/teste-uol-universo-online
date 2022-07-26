@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&family=Roboto:wght@400;500&family=Source+Serif+Pro:wght@600;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<style>
+    @keyframes slideToLeft {
+    0% {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+    @keyframes fadeAfter{
+        0%{
+            opacity: 0;
+        }
+        25%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+
+    .container-banner{
+        width: 100%;
+        max-width: 970px;
+        height: 250px;
+        margin: 0 auto;
+        position: relative;
+        background-image: url('../materiais/ex1/fundo.jpg');
+        
+    }
+    .container-banner figure{
+        margin: 0;
+    }
+    .container-banner #eltOne,#elTwo,#elTree{
+        position: absolute;
+        top: 0;
+        z-index: 999;
+        animation: slideToLeft 1s;
+        -webkit-animation: slideToLeft 1s;
+    }
+    .container-banner .text-block.main{
+        color: #fff;
+        position: absolute;
+        bottom: 0;
+        left: 15px;
+    }
+    .container-banner .text-block h3{
+        font-size: 26px;
+        font-family:'Source Serif Pro', serif;
+        font-weight: 600;
+        margin: 0 0 3px;
+        animation: fadeIn 1.5s;
+        -webkit-animation: fadeIn 1.5s;
+    }
+    .container-banner .text-block h2{
+        font-size: 50px;
+        font-family:'Source Serif Pro', serif;
+        margin: 0 0 15px;
+        font-weight: 600;
+        animation: fadeAfter 2.5s;
+        -webkit-animation: fadeAfter 2.5s;
+    }
+    .container-banner .text-block p{
+        width: 100%;
+        max-width: 165px;
+        font-size: 9px;
+        font-family: 'Merriweather', serif;
+    }
+    .container-banner .text-block.energy{
+        color: #fff;
+        position: absolute;
+        right: 15px;
+        bottom: 25%;
+    }
+    .container-banner .text-block.energy h3{
+        font-size: 24px;
+        margin: 0px;
+    }
+    .container-banner .text-block.energy h2{
+        font-size: 36px;
+        margin: 0 0 23px;
+    }
+</style>
+<body>
+    <div class="container-banner">
+        <div class="text-block main">
+            <h3>Nosso novo ingrediente:</h3>
+            <h2>Energia Verde.</h2>
+            <p>
+                Produção utilizando energia 100%<br> verde nas fábricas de Alagoinhas<br>(BA), Araraquara(SP)
+                e Pont Grossa<br>(PR). Cada dia mais verde. Saiba mais<br> no site: www.heineken.com/br
+            </p>
+        </div>
+        <figure>
+            <picture>
+                <img id="eltOne" src="../materiais/ex1/energia-verde.png" alt="Energia Verde">
+            </picture>
+        </figure>
+        <figure>
+            <picture>
+                <img id="elTwo"  src="../materiais/ex1/heineken.png" alt="Logo Heineken">
+            </picture>
+        </figure>
+        <figure>
+            <picture>
+                <img id="elTree" src="../materiais/ex1/aprecie-com-moderacao.png" alt="Aprecie com Moderação">
+            </picture>
+        </figure>
+        <div class="text-block energy">
+            <h3>Produzida com energia</h3>
+            <h2>100% renovável</h2>
+        </div>
+    </div>
+</body>
+</html>
