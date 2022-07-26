@@ -22,8 +22,12 @@
         height: 280px;
         margin: 5px;
     }
+    .container-slots.person{
+        margin-top: 100px;
+    }
 </style>
-<body>
+
+<body onload="changeShelfNatives()">
     <div class="container-slots">
         <iframe scrolling="no" class="native-slot" src="./ex1.html" name="slot1" frameborder="0"></iframe>
         <iframe scrolling="no" class="native-slot" src="./ex1.html" name="slot2" frameborder="0"></iframe>
@@ -32,5 +36,34 @@
         <iframe scrolling="no" class="native-slot" src="./ex1.html" name="slot5" frameborder="0"></iframe>
         <iframe scrolling="no" class="native-slot" src="./ex1.html" name="slot6" frameborder="0"></iframe>
     </div>
+    
+    <div class="container-slots person">
+        <iframe scrolling="no" class="native-slot" src="./ex1.html" name="slot1" frameborder="0"></iframe>
+        <iframe scrolling="no" class="native-slot" src="./ex1.html" name="slot2" frameborder="0"></iframe>
+        <iframe scrolling="no" class="native-slot" src="./ex1.html" name="slot3" frameborder="0"></iframe>
+        <iframe scrolling="no" class="native-slot" src="./ex1.html" name="slot4" frameborder="0"></iframe>
+        <iframe scrolling="no" class="native-slot" src="./ex1.html" name="slot5" frameborder="0"></iframe>
+        <iframe scrolling="no" class="native-slot" src="./ex1.html" name="slot6" frameborder="0"></iframe>
+    </div>
 </body>
+<script>
+    const randomColor = ()=>{
+        let alphaNumerics = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++){
+            color += alphaNumerics[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+    const changeShelfNatives = () =>{
+        let eleFrames = document.querySelectorAll(".container-slots.person .native-slot")
+        eleFrames.forEach((e)=>{
+            native =  e.contentWindow.document.querySelector(".native");
+            let hat = native.querySelector(".hat-native");
+            hat.style.backgroundColor = randomColor();
+            let image = native.querySelector("figure picture img")
+            image.style = `filter: opacity(0.6) drop-shadow(0 0 0 ${randomColor()});`;
+        })
+    }
+</script>
 </html>
