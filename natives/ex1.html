@@ -13,19 +13,16 @@
     figure,picture{
         margin: 0;
     }
-    .container{
+    .native{
         width: 100%;
-    }
-    .container .native{
-        width: 100%;
-        max-width: 250px;
+        max-width: 280px;
         margin: 0 auto;
     }
-    .container .native figure{
+    .native figure{
         position: relative;
         height: 200px;
     }
-    .container .native figure span{
+    .native figure span{
         position: absolute;
         left: 10px;
         bottom: 15px;   
@@ -34,7 +31,7 @@
         border-radius: 7px;
         padding: 3px 5px;
     }
-    .container .native .text-native{
+    .native .text-native{
         margin: 0;
         padding: 5px  0;
         font-size: 16px;
@@ -45,19 +42,17 @@
     }
 </style>
 <body>
-    <div class="container">
-        <div class="native">
-            <figure>
-                <picture>
-                    <img src="https://picsum.photos/250/200" alt="Image Picsum Native">
-                </picture>
-                <span class="hat-native">Cafuné</span>
-            </figure>
-            <figcaption class="text-native">
-                Cuidado de limpeza que todos os "pais de pets" devem conhecer
-                para manter um lar feliz
-            </figcaption>
-        </div>
+    <div class="native">
+        <figure>
+            <picture>
+                <img src="https://picsum.photos/280/200" alt="Image Picsum Native">
+            </picture>
+            <span class="hat-native">Cafuné</span>
+        </figure>
+        <figcaption class="text-native">
+            Cuidado de limpeza que todos os "pais de pets" devem conhecer
+            para manter um lar feliz
+        </figcaption>
     </div>
 </body>
 </html>
