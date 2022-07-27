@@ -23,7 +23,7 @@ const techOpsPrint = (start,end, steps) =>{
     }
 }
 
-techOpsPrint(0,25,2);
+techOpsPrint(1,25,2);
 console.log('-----Descrescente---------');
-techOpsPrint(25,0,2);
+techOpsPrint(25,2,2);
 
