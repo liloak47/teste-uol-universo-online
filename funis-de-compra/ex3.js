@@ -1,13 +1,13 @@
 const stepLayer = () =>{
     listIds = []
     step = ''
-    
-    dataLayer.forEach((e) => {
+
+    dataLayer.forEach(function(e){
         if(e.pagetype){
             step = e.pagetype
         }
         if(e.ecommerce && e.ecommerce.impressions){
-            e.ecommerce.impressions.forEach((product)=>{
+            e.ecommerce.impressions.forEach(function(product){
                 listIds.push(product.id)
             });
         }

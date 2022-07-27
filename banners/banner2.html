@@ -39,8 +39,8 @@
 <script>
     let image = document.querySelector(".image-step")
     for (let i = 2; i<=3 ; i++){
-        ((i)=>{
-            setTimeout(() => {
+        (function(i){
+            setTimeout(function(){
                 image.src = `../materiais/ex2/300x250-step${i}.gif`;
             }, 2000 *i);
         })(i)

@@ -1,9 +1,9 @@
 const getProductsCart = () =>{
     let listIdProducts = []
     let totalValue = 0;
-    dataLayer.forEach((e) => {
+    dataLayer.forEach(function(e){
         if(e.product){
-            e.product.forEach((product)=>{
+            e.product.forEach(function(product){
                 listIdProducts.push(product.id)
             })
         }

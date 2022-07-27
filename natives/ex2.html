@@ -58,7 +58,7 @@
     }
     const changeShelfNatives = () =>{
         let eleFrames = document.querySelectorAll(".container-slots.custom .native-slot")
-        eleFrames.forEach((e)=>{
+        eleFrames.forEach(function(e){
             native =  e.contentWindow.document.querySelector(".native");
             let hat = native.querySelector(".hat-native");
             hat.style.backgroundColor = randomColor();
